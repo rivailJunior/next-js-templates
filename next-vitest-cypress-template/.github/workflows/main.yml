@@ -94,10 +94,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        # Install NPM dependencies, cache them correctly
-        # and run all Cypress tests
-        env:
-          WELCOME_MESSAGE: ${{ vars.WELCOME_MESSAGE }}
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
